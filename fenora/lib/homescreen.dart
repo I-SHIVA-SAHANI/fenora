@@ -57,15 +57,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Delivery to ",
                               style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black),
+                                  color: Colors.black,
+                                  fontFamily: 'Lexend'),
                             ),
                             Text(
                               "Home",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Lexend',
                               ),
                             ),
                           ],
