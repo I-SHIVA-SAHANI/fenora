@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.16,
+              height: MediaQuery.of(context).size.height * 0.2,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: Color(0xFFD75F5F),
@@ -33,82 +33,90 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               child: SafeArea(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.menu),
-                      iconSize: 40,
-                      color: Colors.black,
-                    ),
-                    Icon(
-                      Icons.location_pin,
-                      size: 40,
-                    ),
-
-                    // column containing address
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Delivery to ",
-                              style: TextStyle(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "Fenora ",
+                            style: TextStyle(
+                                fontFamily: 'Allura',
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Spacer(),
+                          Spacer(),
+                          GestureDetector(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AdressSelection())),
+                            child: Icon(
+                              Icons.account_circle_rounded,
+                              size: 40,
+                            ),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.location_pin,
+                                size: 20,
+                              ),
+                              Text(
+                                "Delivery to ",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontFamily: 'Lexend'),
+                              ),
+                              Text(
+                                "Home",
+                                style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontFamily: 'Lexend'),
-                            ),
-                            Text(
-                              "Home",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Lexend',
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            AdressSelection()));
-                              },
-                              child: SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.5,
-                                child: Text(
-                                  // textAlign: TextAlign.left,
-                                  "25, Kodigehalli main Rd, Defence Layout, Sahakar nagar, Bengaluru, Karnataka, 560097",
-                                  overflow: TextOverflow.ellipsis,
+                                  fontFamily: 'Lexend',
                                 ),
                               ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AdressSelection()));
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              child: Text(
+                                // textAlign: TextAlign.left,
+                                "25, Kodigehalli main Rd, Defence Layout, Sahakar nagar, Bengaluru, Karnataka, 560097",
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
-                            const Icon(
+                            Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                    Spacer(),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.shopping_cart_outlined,
-                        size: 35,
-                        color: Colors.black,
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

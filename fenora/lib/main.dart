@@ -1,4 +1,4 @@
-import 'package:fenora/address.dart';
+import 'package:fenora/add_address.dart';
 import 'package:fenora/homescreen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: HomeScreen(),
-      ),
+      home: HomeScreen(),
     );
   }
 }
