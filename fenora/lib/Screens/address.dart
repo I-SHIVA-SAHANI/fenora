@@ -1,5 +1,5 @@
-import 'package:fenora/add_address.dart';
-import 'package:fenora/homescreen.dart';
+import 'package:fenora/Screens/add_address.dart';
+import 'package:fenora/bottombar.dart';
 import 'package:flutter/material.dart';
 
 class AdressSelection extends StatefulWidget {
@@ -39,7 +39,7 @@ class _AdressSelectionState extends State<AdressSelection> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) => BottomBar()));
                       },
                       icon: Icon(Icons.arrow_back_ios),
                       color: Colors.black,

@@ -1,6 +1,6 @@
-import 'package:fenora/categoryscreen.dart';
-import 'package:fenora/homescreen.dart';
-import 'package:fenora/shoppingcart.dart';
+import 'package:fenora/Screens/categoryscreen.dart';
+import 'package:fenora/Screens/homescreen.dart';
+import 'package:fenora/Screens/shoppingcart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 

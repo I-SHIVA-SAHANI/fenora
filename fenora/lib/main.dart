@@ -1,5 +1,5 @@
-import 'package:fenora/add_address.dart';
-import 'package:fenora/homescreen.dart';
+// import 'package:fenora/Screens/homescreen.dart';
+import 'package:fenora/bottombar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: BottomBar(),
     );
   }
 }
